@@ -3,51 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <title>About - King Tshaka Music Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #eee;
+      background: url("images/dj_live.png") no-repeat center center fixed;
+      background-size: cover; /* scales image to fill screen */
+    }
+
+    header, footer {
+      background: rgba(34,34,34,0.8); /* semi-transparent overlay */
+      text-align: center;
+    }
+
+    header {
+      padding: 40px;
+    }
+
+    header h1 {
+      color: #ffd700;
+      margin: 0;
+    }
+
+    header p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ffd700;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      background: rgba(17,17,17,0.7); /* overlay for readability */
+      border-radius: 10px;
+    }
+
+    section h2 {
+      color: #ffd700;
+    }
+
+    section p {
+      margin: 20px 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .highlights {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .highlights div {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    .highlights h3 {
+      color: #ffd700;
+    }
+
+    footer {
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer p:first-child {
+      color: #eee;
+    }
+
+    footer p:last-child {
+      color: #ffd700;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin:0; background:#111; color:#eee;">
+<body>
 
   <!-- Header -->
-  <header style="background:#222; text-align:center; padding:40px;">
-    <h1 style="color:#ffd700; margin:0;">King Tshaka Music Services</h1>
-    <p style="margin:5px 0; color:#ccc;">Celebrating life with music</p>
-    <nav style="margin-top:15px;">
-      <a href="home.html" style="color:#ffd700; margin:0 15px; text-decoration:none; font-weight:bold;">Home</a>
-      <a href="about.html" style="color:#ffd700; margin:0 15px; text-decoration:none; font-weight:bold;">About</a>
-      <a href="contact.html" style="color:#ffd700; margin:0 15px; text-decoration:none; font-weight:bold;">Contact</a>
+  <header>
+    <h1>King Tshaka Music Services</h1>
+    <p>Celebrating life with music</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <!-- About Section -->
-  <section style="padding:40px; max-width:900px; margin:auto;">
-    <h2 style="color:#ffd700; text-align:center;">About Us</h2>
-    <p style="margin:20px 0; font-size:18px; line-height:1.6; text-align:center;">
+  <section>
+    <h2>About Us</h2>
+    <p>
       King Tshaka Music Services is dedicated to bringing joy and energy to every celebration.  
       From weddings and birthdays to cultural events and community gatherings, we provide professional DJs, live performers, and high-quality sound systems.  
       Our mission is simple: to make every event unforgettable through the power of music.
     </p>
 
     <!-- Highlights -->
-    <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:30px;">
-      <div style="background:#222; padding:20px; border-radius:10px; width:250px; text-align:center;">
-        <h3 style="color:#ffd700;">Experience</h3>
+    <div class="highlights">
+      <div>
+        <h3>Experience</h3>
         <p>Years of expertise in event music and sound management.</p>
       </div>
-      <div style="background:#222; padding:20px; border-radius:10px; width:250px; text-align:center;">
-        <h3 style="color:#ffd700;">Professionalism</h3>
+      <div>
+        <h3>Professionalism</h3>
         <p>Reliable service with a focus on quality and client satisfaction.</p>
       </div>
-      <div style="background:#222; padding:20px; border-radius:10px; width:250px; text-align:center;">
-        <h3 style="color:#ffd700;">Community</h3>
+      <div>
+        <h3>Community</h3>
         <p>Proudly serving local celebrations and cultural events.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
- <footer style="background:#222; text-align:center; padding:20px; margin-top:30px;">
-  <p style="margin:0; color:#eee;">&copy; 2026 King Tshaka Music Services</p>
-  <p style="margin:5px 0; color:#ffd700; font-size:14px;">Engineered by Ezrael Mwansele</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 King Tshaka Music Services</p>
+    <p>Engineered by Ezrael Mwansele</p>
+  </footer>
 
 </body>
 </html>
