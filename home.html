@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- ✅ Mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - King Tshaka Music Services</title>
   <style>
     body {
@@ -43,6 +45,8 @@
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
+      font-size: 1.2em;   /* ✅ bigger base size */
+      padding: 10px 15px; /* ✅ more tap-friendly */
     }
     nav a:hover {
       color: #fff;
@@ -112,6 +116,40 @@
       font-style: italic;
       letter-spacing: 1px;
     }
+
+    /* ✅ Mobile adjustments */
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 1.4em;   /* larger text on phones */
+        display: block;     /* stack links vertically */
+        text-align: center;
+        padding: 12px;      /* finger-friendly spacing */
+      }
+
+      header {
+        padding: 30px 15px; /* less padding on small screens */
+      }
+
+      .hero {
+        padding: 40px 15px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .services {
+        padding: 40px 15px;
+      }
+
+      .card {
+        width: 100%;        /* cards stretch full width on phones */
+      }
+    }
   </style>
 </head>
 <body>
@@ -124,6 +162,7 @@
       <a href="home.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="gallery.html">View Gallery</a>
     </nav>
   </header>
 
@@ -159,7 +198,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 King Tshaka Music Services</p>
-    <p>Engineered by Ezrael Mwansele </p>
+    <p>Engineered by Ezrael Mwansele</p>
   </footer>
 
 </body>
