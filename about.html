@@ -33,8 +33,12 @@
       color: #ccc;
     }
 
+    /* ✅ Horizontal nav with flexbox */
     nav {
       margin-top: 15px;
+      display: flex;
+      justify-content: center;   /* center links */
+      flex-wrap: wrap;           /* wrap if too narrow */
     }
 
     nav a {
@@ -42,8 +46,8 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;   /* ✅ bigger base size */
-      padding: 10px 15px; /* ✅ more tap-friendly */
+      font-size: 1.2em;   /* bigger base size */
+      padding: 10px 15px; /* tap-friendly */
     }
 
     section {
@@ -105,9 +109,7 @@
     /* ✅ Mobile adjustments */
     @media (max-width: 768px) {
       nav a {
-        font-size: 1.4em;   /* larger text on phones */
-        display: block;     /* stack links vertically */
-        text-align: center;
+        font-size: 1.3em;   /* slightly larger text on phones */
         padding: 12px;      /* finger-friendly spacing */
       }
 
