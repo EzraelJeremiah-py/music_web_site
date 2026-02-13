@@ -16,30 +16,45 @@
     header {
       background: #222;
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
     }
 
     header h1 {
       color: #ffd700;
       margin: 0;
+      font-size: 2.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     header p {
       margin: 5px 0;
       color: #ccc;
+      font-size: 1.1em;
     }
 
+    /* ✅ Horizontal nav with flexbox */
     nav {
       margin-top: 15px;
+      display: flex;
+      justify-content: center;   /* center links */
+      gap: 25px;                 /* spacing between links */
+      flex-wrap: wrap;           /* wrap if too narrow */
     }
 
     nav a {
       color: #ffd700;
-      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;   /* ✅ bigger base size */
-      padding: 10px 15px; /* ✅ tap-friendly */
+      font-size: 1.2em;
+      padding: 8px 12px;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: #ffd700;
+      color: #222;
     }
 
     section {
@@ -51,6 +66,8 @@
 
     section h2 {
       color: #ffd700;
+      font-size: 2em;
+      margin-bottom: 20px;
     }
 
     section p {
@@ -92,14 +109,12 @@
     /* ✅ Mobile adjustments */
     @media (max-width: 768px) {
       nav a {
-        font-size: 1.4em;   /* larger text on phones */
-        display: block;     /* stack links vertically */
-        text-align: center;
-        padding: 12px;
+        font-size: 1.3em;   /* slightly larger text on phones */
+        padding: 10px;      /* finger-friendly spacing */
       }
 
       header {
-        padding: 20px;
+        padding: 25px 15px;
       }
 
       section {
@@ -118,6 +133,7 @@
   <header>
     <h1>King Tshaka Music Services</h1>
     <p>Celebrating life with music</p>
+    <!-- ✅ Nav aligned horizontally under tagline -->
     <nav>
       <a href="home.html">Home</a>
       <a href="about.html">About</a>
