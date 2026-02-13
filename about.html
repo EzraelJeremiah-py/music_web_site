@@ -11,43 +11,54 @@
       margin: 0;
       color: #eee;
       background: url("images/dj_live.png") no-repeat center center fixed;
-      background-size: cover; /* scales image to fill screen */
+      background-size: cover;
     }
 
     header, footer {
-      background: rgba(34,34,34,0.8); /* semi-transparent overlay */
+      background: rgba(34,34,34,0.85);
       text-align: center;
     }
 
     header {
-      padding: 40px;
+      padding: 30px 20px;
     }
 
     header h1 {
       color: #ffd700;
       margin: 0;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     header p {
-      margin: 5px 0;
+      margin: 8px 0;
       color: #ccc;
+      font-size: 1.1em;
     }
 
-    /* ✅ Horizontal nav with flexbox */
+    /* ✅ Horizontal nav directly under tagline */
     nav {
       margin-top: 15px;
       display: flex;
-      justify-content: center;   /* center links */
-      flex-wrap: wrap;           /* wrap if too narrow */
+      justify-content: center;
+      gap: 25px;              /* spacing between links */
+      flex-wrap: wrap;        /* wrap if screen is narrow */
     }
 
     nav a {
       color: #ffd700;
-      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;   /* bigger base size */
-      padding: 10px 15px; /* tap-friendly */
+      font-size: 1.2em;
+      padding: 8px 12px;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    nav a:hover {
+      background: #ffd700;
+      color: #222;
     }
 
     section {
@@ -55,12 +66,14 @@
       max-width: 900px;
       margin: auto;
       text-align: center;
-      background: rgba(17,17,17,0.7); /* overlay for readability */
-      border-radius: 10px;
+      background: rgba(17,17,17,0.75);
+      border-radius: 12px;
     }
 
     section h2 {
       color: #ffd700;
+      font-size: 2em;
+      margin-bottom: 20px;
     }
 
     section p {
@@ -82,10 +95,17 @@
       padding: 20px;
       border-radius: 10px;
       width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .highlights div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
     }
 
     .highlights h3 {
       color: #ffd700;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -109,12 +129,12 @@
     /* ✅ Mobile adjustments */
     @media (max-width: 768px) {
       nav a {
-        font-size: 1.3em;   /* slightly larger text on phones */
-        padding: 12px;      /* finger-friendly spacing */
+        font-size: 1.3em;
+        padding: 10px;
       }
 
       header {
-        padding: 20px;      /* less padding on small screens */
+        padding: 20px 15px;
       }
 
       section {
@@ -129,6 +149,7 @@
   <header>
     <h1>King Tshaka Music Services</h1>
     <p>Celebrating life with music</p>
+    <!-- ✅ Nav appears directly under tagline -->
     <nav>
       <a href="home.html">Home</a>
       <a href="about.html">About</a>
