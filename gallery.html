@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- ✅ Mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - King Tshaka Music Services</title>
-  <link rel="stylesheet" href="style.css"> <!-- reuse your main CSS -->
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #111;
+      color: #eee;
+    }
+
+    header {
+      background: #222;
+      text-align: center;
+      padding: 40px;
+    }
+
+    header h1 {
+      color: #ffd700;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ffd700;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;   /* ✅ bigger base size */
+      padding: 10px 15px; /* ✅ tap-friendly */
+    }
+
+    nav a.active {
+      color: #fff;
+    }
+
     /* Gallery Layout */
     .gallery {
       display: grid;
@@ -37,7 +73,7 @@
       text-align: center;
       margin-top: 8px;
       font-size: 0.9rem;
-      color: #555;
+      color: #ccc;
     }
 
     /* Lightbox Modal */
@@ -57,41 +93,81 @@
       max-height: 90%;
       border-radius: 8px;
     }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer p:first-child {
+      color: #eee;
+    }
+
+    footer p:last-child {
+      color: #ffd700;
+      font-size: 14px;
+    }
+
+    /* ✅ Mobile adjustments */
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 1.4em;   /* larger text on phones */
+        display: block;     /* stack links vertically */
+        text-align: center;
+        padding: 12px;
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr; /* single column on phones */
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Our Event Gallery</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="home.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="gallery.html" class="active">Gallery</a>
     </nav>
   </header>
 
+  <!-- Gallery Section -->
   <main>
     <section class="gallery">
       <div class="gallery-item">
-        <img src="images/dj_live.png" alt=" ">
-        <p class="caption">  </p>
+        <img src="images/dj_live.png" alt="DJ Live Performance">
+        <p class="caption">DJ Live Performance</p>
       </div>
       <div class="gallery-item">
-        <img src="images/background_stage.png" alt=" ">
-        <p class="caption"> </p>
+        <img src="images/background_stage.png" alt="Stage Setup">
+        <p class="caption">Stage Setup</p>
       </div>
       <div class="gallery-item">
-        <img src="images/music_band.png" alt=" ">
-        <p class="caption"> </p>
+        <img src="images/music_band.png" alt="Music Band">
+        <p class="caption">Music Band</p>
       </div>
     </section>
   </main>
 
- <footer style="background:#222; text-align:center; padding:20px; margin-top:30px;">
-  <p style="margin:0; color:#eee;">&copy; 2026 King Tshaka Music Services</p>
-  <p style="margin:5px 0; color:#ffd700; font-size:14px;">Engineered by Ezrael Mwansele</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 King Tshaka Music Services</p>
+    <p>Engineered by Ezrael Mwansele</p>
+  </footer>
 
   <!-- Lightbox Script -->
   <div id="lightbox"><img src="" alt=""></div>
